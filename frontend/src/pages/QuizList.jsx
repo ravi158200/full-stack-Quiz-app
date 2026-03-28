@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -11,7 +12,7 @@ const QuizList = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/quizzes');
+        const res = await axios.get('/api/quizzes');
         setQuizzes(res.data);
       } catch (err) {
         setError('Failed to fetch quizzes');

@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2 group">
             <BrainCircuit className="w-8 h-8 text-primary-600 dark:text-primary-500 group-hover:rotate-12 transition-transform" />
             <span className="font-bold text-xl bg-clip-text text-transparent bg-linear-to-r from-primary-600 to-primary-900 dark:from-primary-400 dark:to-primary-600">
-              BasicQuiz
+              BrainSpark
             </span>
           </Link>
           

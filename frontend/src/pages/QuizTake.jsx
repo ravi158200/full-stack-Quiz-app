@@ -18,7 +18,7 @@ const QuizTake = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/quizzes/${id}`);
+        const res = await axios.get(`/api/quizzes/${id}`);
         setQuiz(res.data);
       } catch (error) {
         setError('Failed to load quiz. ' + (error.response?.data?.message || ''));
@@ -45,7 +45,7 @@ const QuizTake = () => {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post(`http://localhost:5000/api/quizzes/${id}/submit`, { answers });
+      const res = await axios.post(`/api/quizzes/${id}/submit`, { answers });
       setResult(res.data);
       setIsSubmitted(true);
     // eslint-disable-next-line no-unused-vars
